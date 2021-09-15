@@ -24,8 +24,6 @@ const close_modal = () => {
 
 ////////////////// Код для второго файда
 
-// Стартовые значения JSON, для того, чтобы отправить информацию, если пользователь не ввел ничего
-
 let obj_json = '';
 
 document.getElementsByClassName('submit-btn')[0].addEventListener('click', (event)=>{

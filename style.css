@@ -21,15 +21,30 @@
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-200px);
-
+    transform: translateY(-220px);
+    opacity: 0.6;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     font-family: 'Montserrat', sans-serif;
+
+    animation: mw_animation 1s 1 ease ;
+    animation-fill-mode: forwards;
 }
+
+@keyframes mw_animation {
+    0%{
+        transform: translateY(-220px);
+        opacity: 0.6;
+    }
+    100%{
+        transform: translateY(-200px);
+        opacity: 1;
+    }
+}
+
+
 
 .modal-window__msg{
     font-size: 30px; 

@@ -25,23 +25,23 @@ function close_modal(){
 ////////////////// Код для второго файда
 
 // Стартовые значения JSON, для того, чтобы отправить информацию, если пользователь не ввел ничего
-var obj_json = `{"option1": "1", "option2": "1", "option3": "1", "option4": "1", "option5": "1", "input1": "", "input2": ""}`;
+
+let obj_json = '';
 
 document.getElementsByClassName('submit-btn')[0].addEventListener('click', (event)=>{
     event.preventDefault(); 
 
+    let result = obj_json || `{"option1": "1", "option2": "1", "option3": "1", "option4": "1", "option5": "1", "input1": "", "input2": ""}`; // присвоение по умолчанию
+    
     request();
     
 });
 
 async function request(){
-    let response = await fetch('/article/fetch/post/user', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(user)
-      });
+    let response = await fetch('https://sergeykiselev2001.github.io/Terem/data.json');
+    alert(response);
+    let response_parsed = await response.json();
+    alert(response_parsed);
 }
 
 function formChanging(){
@@ -63,7 +63,7 @@ function formChanging(){
     let [x1,x2,x3,x4,x5] = options_value;
     let [y1, y2] = inputs_value;
 
-    document.getElementsByClassName('second')[0].innerHTML = `{<wbr>"option1": "${x1}", "option2": "${x2}", "option3": "${x3}", "option4": "${x4}", "option5": "${x5}", "input1": "${y1}", "input2": "${y2}"}`;
+    document.getElementsByClassName('second')[0].innerHTML = `{"option1": "${x1}", "option2": "${x2}", "option3": "${x3}", "option4": "${x4}", "option5": "${x5}", "input1": "${y1}", "input2": "${y2}"}`;
 
     obj_json = document.getElementsByClassName('second')[0].innerHTML;
 }

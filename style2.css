@@ -94,6 +94,25 @@ input[type="submit"]:active{
 
 }
 
+@media (max-width: 576px) {
+
+    .content {
+        height: 600px;
+        width: 90%;
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    input {
+        margin: 10px;
+    }
+
+    .second {
+        top: 90%;
+    }
+
+}
+
 
 /* .submit-btn::after{
     position: absolute;

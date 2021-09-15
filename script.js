@@ -39,9 +39,9 @@ document.getElementsByClassName('submit-btn')[0].addEventListener('click', (even
 
 async function request(){
     let response = await fetch('https://sergeykiselev2001.github.io/Terem/data.json');
-    alert(response);
+    console.log(response);
     let response_parsed = await response.json();
-    alert(response_parsed);
+    console.log(response_parsed.message);
 }
 
 function formChanging(){

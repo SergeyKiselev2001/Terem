@@ -1,4 +1,6 @@
 
+alert('test');
+
 function thirdblock_btn1(){
     const firstblock = document.getElementsByClassName('first-block')[0];
 
@@ -40,8 +42,8 @@ document.getElementsByClassName('submit-btn')[0].addEventListener('click', (even
 async function request(){
     let response = await fetch('https://sergeykiselev2001.github.io/Terem/data.json');
     console.log(response);
-    let response_parsed = await response.json();
-    console.log(response_parsed.message);
+    let response_parsed = await response.text();
+    console.log(response_parsed);
 }
 
 function formChanging(){

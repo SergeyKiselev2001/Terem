@@ -2,9 +2,8 @@
 Тестовое задание
 
 Для быстрого просмотра
-
-https://sergeykiselev2001.github.io/Terem/task1.html
-https://sergeykiselev2001.github.io/Terem/task2.html
+1. https://sergeykiselev2001.github.io/Terem/task1.html 
+2. https://sergeykiselev2001.github.io/Terem/task2.html
 
 **ТЕРЕМЪ. ТЕСТОВОЕ ЗАДАНИЕ**
  
